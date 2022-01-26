@@ -1,0 +1,30 @@
+@use "../colors" as color;
+@use "../fonts" as font;
+
+.header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-bottom: 1rem;
+  border-bottom: dashed 2px color.$font;
+
+  button {
+    $btn-movement: 2px;
+
+    color: color.$font;
+    font-size: 1.25rem;
+    background: color.$btn-bg;
+    border: none;
+    border-radius: 6px;
+    padding: 0.75rem 1.5rem;
+
+    cursor: pointer;
+    box-shadow: 0 $btn-movement lighten(color.$btn-bg, 30%);
+    font-family: font.$primary;
+
+    &:hover {
+      transform: translateY($btn-movement);
+      box-shadow: 0 0;
+    }
+  }
+}

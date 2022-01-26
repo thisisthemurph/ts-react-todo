@@ -1,0 +1,18 @@
+@use "../colors" as color;
+
+.todo {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+
+  padding: 1rem;
+
+  &__title {
+    font-size: 1rem;
+    margin-right: 1rem;
+  }
+
+  &:hover {
+    background: lighten(color.$bg, 10%);
+  }
+}
